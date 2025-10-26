@@ -18,34 +18,37 @@ This app allows users to search, book, and manage flights, while also exploring 
 👤 User Profile — Manage profile, view stats, and see unlocked badges.
 
 🖼️ App Screenshots
+<h2 align="center">✨ App Screenshots</h2>
+
 <p align="center">
-  <img src="S1.jpg" width="200" />
-  <img src="S2.jpg" width="200" />
-  <img src="S3.jpg" width="200" />
-</p>
-<p align="center">
-  <img src="S4.jpg" width="200" />
-  <img src="S5.jpg" width="200" />
-  <img src="S6.jpg" width="200" />
-</p>
-<p align="center">
-  <img src="S7.jpg" width="200" />
-  <img src="S8.jpg" width="200" />
-  <img src="S9.jpg" width="200" />
-</p>
-<p align="center">
-  <img src="S10.jpg" width="200" />
+  <em>From flight search to AI-powered trip planning — a glimpse of the complete travel experience.</em>
 </p>
 
-	
-	
-	
-Profile	Badges	AI Chatbot (Trip Suggestion)	My Trips
+<hr style="border: 1px solid #444; width: 80%;">
 
-	
-	
-	
-Completed Trips	Destination Highlight
+<p align="center">
+  <img src="S1.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+  <img src="S2.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+  <img src="S3.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+</p>
+
+<p align="center">
+  <img src="S4.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+  <img src="S5.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+  <img src="S6.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+</p>
+
+<p align="center">
+  <img src="S7.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+  <img src="S8.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+  <img src="S9.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+</p>
+
+<p align="center">
+  <img src="S10.jpg" width="220" style="margin: 12px; border-radius: 16px; box-shadow: 0 0 10px rgba(255,255,255,0.15);" />
+</p>
+
+<hr style="border: 1px solid #444; width: 80%;">
 
 	
 🛠️ Tech Stack
