@@ -18,7 +18,24 @@ This app allows users to search, book, and manage flights, while also exploring 
 👤 User Profile — Manage profile, view stats, and see unlocked badges.
 
 🖼️ App Screenshots
-S1 S2 S3 S4 S5 S6 S7 S8
+<p align="center">
+  <img src="S1.jpg" width="200" />
+  <img src="S2.jpg" width="200" />
+  <img src="S3.jpg" width="200" />
+</p>
+<p align="center">
+  <img src="S4.jpg" width="200" />
+  <img src="S5.jpg" width="200" />
+  <img src="S6.jpg" width="200" />
+</p>
+<p align="center">
+  <img src="S7.jpg" width="200" />
+  <img src="S8.jpg" width="200" />
+  <img src="S9.jpg" width="200" />
+</p>
+<p align="center">
+  <img src="S10.jpg" width="200" />
+</p>
 
 	
 	
