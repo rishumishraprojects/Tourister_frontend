@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Tourister" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fitsSystemWindows">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="Theme.Tourister" parent="Base.Theme.Tourister" />
+
+    <style name="Theme.Tourister.Splash" parent="Theme.Tourister">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.Tourister.AiPrompt" parent="Theme.Material3.DayNight">
+        <item name="android:fitsSystemWindows">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+
+</resources>

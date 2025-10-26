@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:text="Profile"
+        app:titleTextColor="@color/white"/>
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_profile"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_background"
+        android:contentDescription="Profile picture"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Full Name -->
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Edit Button -->
+    <Button
+        android:id="@+id/edit_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile" />
+
+    <!-- Trip Count -->
+    <TextView
+        android:id="@+id/trip_count"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:text="Trips Completed: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <!-- Badges Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Badges"
+        android:layout_margin="10dp"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <!-- Badges Recycler -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/badge_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

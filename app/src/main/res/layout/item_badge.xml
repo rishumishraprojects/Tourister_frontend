@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/badge_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_badge_locked" />
+
+    <TextView
+        android:id="@+id/badge_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Badge Name"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/badge_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Badge description"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>

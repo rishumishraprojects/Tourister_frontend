@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- Destination Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/destinationTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="2dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxStrokeColor="@color/design_default_color_primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/destinationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Destination"
+            android:textColorHint="@android:color/darker_gray"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Dates Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/datesTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:boxStrokeWidth="2dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxStrokeColor="@color/design_default_color_primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/datesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Trip Date"
+            android:focusable="false"
+            android:clickable="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Select Image Button -->
+    <Button
+        android:id="@+id/selectImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="Select Image"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"/>
+
+    <!-- Selected Image Preview -->
+    <ImageView
+        android:id="@+id/selectedImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/image_preview_border"/>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="Save Trip"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="?attr/colorPrimary"
+        android:drawablePadding="8dp"/>
+</LinearLayout>

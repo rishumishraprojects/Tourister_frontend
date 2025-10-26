@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Tourister" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+    <style name="Theme.Tourister.AiPrompt" parent="Theme.Material3.DayNight">
+        <item name="android:fitsSystemWindows">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Existing header animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/header_animation_view"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/mainactivity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- From & To AutoCompleteTextViews -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/from_text_input_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:hint="From"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header_animation_view"
+                app:layout_constraintEnd_toStartOf="@+id/swap_button" >
+                <AutoCompleteTextView
+                    android:id="@+id/from_auto_complete_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/to_text_input_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Where to?"
+                app:layout_constraintStart_toEndOf="@+id/swap_button"
+                app:layout_constraintTop_toTopOf="@id/from_text_input_layout"
+                app:layout_constraintEnd_toEndOf="parent">
+                <AutoCompleteTextView
+                    android:id="@+id/to_auto_complete_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/swap_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/swap_horiz"
+                android:scaleType="fitCenter"
+                android:contentDescription="Swap locations"
+                app:layout_constraintTop_toTopOf="@id/from_text_input_layout"
+                app:layout_constraintBottom_toBottomOf="@id/from_text_input_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Departure Date -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/departure_date_text_input_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Departure"
+                app:startIconDrawable="@drawable/calend"
+                app:layout_constraintStart_toStartOf="@id/from_text_input_layout"
+                app:layout_constraintTop_toBottomOf="@id/from_text_input_layout"
+                app:layout_constraintEnd_toEndOf="@id/to_text_input_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/departure_date_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Explore button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/explore_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Search Flights"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_search"
+                app:iconTint="@color/white"
+                app:layout_constraintStart_toStartOf="@id/departure_date_text_input_layout"
+                app:layout_constraintEnd_toEndOf="@id/departure_date_text_input_layout"
+                app:layout_constraintTop_toBottomOf="@id/departure_date_text_input_layout" />
+
+            <!-- Suggestion Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/suggestion_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="1dp"
+                app:layout_constraintStart_toStartOf="@id/explore_button"
+                app:layout_constraintEnd_toEndOf="@id/explore_button"
+                app:layout_constraintTop_toBottomOf="@id/explore_button">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/card_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="BORED? Let Us Take U To Trips"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="?attr/colorOnSurface"
+                        app:layout_constraintEnd_toStartOf="@id/new_chip"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="8dp"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/new_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/card_title"
+                        app:layout_constraintBottom_toBottomOf="@id/card_title"/>
+
+                    <TextView
+                        android:id="@+id/card_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Describe your ideal trip, and let Tourister AI find the best places for you"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/card_title" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/explore_deals_button"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Explore with AI"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_sparkle"
+                        app:iconTint="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/card_description" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- New CardView for Slideshow -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/photo_card"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp"
+                app:layout_constraintEnd_toEndOf="@+id/suggestion_card"
+                app:layout_constraintStart_toStartOf="@+id/suggestion_card"
+                app:layout_constraintTop_toBottomOf="@id/suggestion_card">
+
+                <ImageView
+                    android:id="@+id/card_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

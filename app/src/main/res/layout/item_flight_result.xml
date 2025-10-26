@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/airline_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceTitleSmall"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="IndiGo" />
+
+        <TextView
+            android:id="@+id/flight_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/airline_name"
+            tools:text="6E-234" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/location_and_time_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flight_number">
+
+            <TextView
+                android:id="@+id/from_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Gorakhpur" />
+
+            <TextView
+                android:id="@+id/departure_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/time_separator"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/from_location"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="10:00" />
+
+            <TextView
+                android:id="@+id/time_separator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="-"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                app:layout_constraintEnd_toStartOf="@id/arrival_time"
+                app:layout_constraintStart_toEndOf="@id/departure_time"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="-" />
+
+            <TextView
+                android:id="@+id/arrival_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/to_location"
+                app:layout_constraintStart_toEndOf="@id/time_separator"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="12:30" />
+
+            <TextView
+                android:id="@+id/to_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Prayagraj" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="105dp"
+            android:layout_height="38dp"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/airline_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rs. 4,500" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/book_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:gravity="center_horizontal"
+            android:text="Book Flight"
+            android:textSize="20dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location_and_time_container"
+            app:layout_constraintVertical_bias="0.666" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
