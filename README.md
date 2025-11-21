@@ -55,27 +55,27 @@ This app allows users to search, book, and manage flights, while also exploring 
 
 Frontend (Android App)
 
-💻 Language: Kotlin
+💻 Language: Kotlin,XML
 
-🧩 Architecture: MVVM + Jetpack Components
+🧩 Architecture: MVVM 
 
 🌐 Networking: Retrofit2 + Coroutines
 
 💾 Local Storage: Room Database
 
-🎨 UI Design: Material3 + Compose UI (Dark Theme Support)
+🎨 UI Design: Material3 + XML (Dark Theme Support)
 
 Backend (API Server)
 
 ⚙️ Framework: FastAPI (Python 3.11)
 
-🗃️ Database: PostgreSQL
+🗃️ Database: PostGres
 
-🔒 Auth: JWT-based authentication
+🔒 Auth: JWT
 
 🤖 AI Services: Integrated OpenAI API for destination recommendations
 
-🚀 Hosting: Render / AWS EC2 / Railway (as per deployment)
+🚀 Hosting: Render 
 
 🚀 Future Enhancements
 
